@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Fake News Detector</title>
+  </head>
+  <body class="bg-slate-900	">
+    <header class="text-gray-600 body-font -my-8">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+         
+        
+            <span class="ml-3 text-xl">Fake News Detector</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="/" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="/prediction" class="mr-5 hover:text-gray-900"> Prediction</a>
+           
+          </nav>
+        </div>
+      </header><hr>
+      <section class="text-gray-600 body-font -my-8">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h2 class="text-xs text-green-500 tracking-widest font-medium title-font mb-1">Artificial Intelligence Project</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Fake News Detection</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">“The truth does
+              not become a lie,
+              right does not become
+              wrong, and good does
+              not become evil, just
+              because the minority
+              believes in conspiracy
+              theories & fake news!”</p>
+            <br><p class="text-primary"><b>{{prediction_text}}</b></p>
+          </div>
+          <div class="center">
+            <form action="/prediction" method="POST">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Enter news headlines</label>
+                  <input type="text" class="form-control" id="news" name="news" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your Information with anyone else.</div>
+                </div>
+              
+              <a href="">
+                <button type="submit" class="btn btn-lg btn-warning">Submit</button>
+              </a> 
+              </form>
+          </div>
+        </div>
+        
+      </section>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+  </body>
+</html>
